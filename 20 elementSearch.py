@@ -11,7 +11,7 @@ Use binary search.
 import random, math
 
 randomList = random.sample(range(100),10)
-myList = [0,1,2,3,4,5,6,7,8,9]
+myList = [55,66, 77,84,90,91,92,93,94,95]
 
 """
 Parameters:
@@ -27,7 +27,7 @@ def binarySearch(listParam, number):
 	print('Current list', listParam)
 	print('Current middle element', middleElement)
 
-	if len(listParam) > 1:
+	if len(listParam) >= 1:
 		if number > listParam[middleIndex]:
 			print('The number to search "{0}" is to the right of the middle element'.format(number))
 			newList = listParam[middleIndex:]
@@ -47,4 +47,4 @@ def binarySearch(listParam, number):
 
 myList.sort()
 randomList.sort()
-binarySearch(randomList, 55)
+binarySearch(myList, 95)
