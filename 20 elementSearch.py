@@ -27,7 +27,7 @@ def binarySearch(listParam, number):
 	print('Current list', listParam)
 	print('Current middle element', middleElement)
 
-	if len(listParam) >= 1:
+	if len(listParam) > 1:
 		if number > listParam[middleIndex]:
 			print('The number to search "{0}" is to the right of the middle element'.format(number))
 			newList = listParam[middleIndex:]
@@ -40,6 +40,9 @@ def binarySearch(listParam, number):
 
 		if number == listParam[middleIndex]:
 			print('Element found:', listParam[middleIndex])
+			
+	elif len(listParam) == 1 and number == listParam[middleIndex]:
+			print('Element found:', listParam[middleIndex])
 	else:
 		print('Couldn\'t find the element {0}'.format(number))
 	
@@ -47,4 +50,4 @@ def binarySearch(listParam, number):
 
 myList.sort()
 randomList.sort()
-binarySearch(myList, 95)
+binarySearch(randomList, 55)
